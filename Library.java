@@ -19,7 +19,7 @@ public class Library extends Building{
     }
   
     
-    /** Add a book to the collection
+    /** Add a book to the collection 
     * @param Title of the book we want to add
     */
     public void addTitle(String title) {

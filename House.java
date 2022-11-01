@@ -10,7 +10,7 @@ public class House extends Building{
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
 
-/** Class constructor
+/** Class constructor 
  * @param House's name, address, number of floors, and whether or not it has a dinning room
  */
   public House(String name, String address, int nFloors, boolean hDiningRoom) {
