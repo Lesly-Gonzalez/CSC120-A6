@@ -63,7 +63,7 @@ Modify the `House` **constructor** to initialize `residents` to a `new ArrayList
 ---
 2. Write the following accessors to retrieve the indicated values:
 ```
-public boolean hasDiningRoom();
+public Boolean hasDiningRoom();
 public int nResidents();
 ```
 
