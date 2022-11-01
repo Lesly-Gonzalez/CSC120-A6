@@ -5,4 +5,4 @@ Use this file to record your reflection on this assignment.
 
 I enjoyed using inheritance in this assigment. In a way it helps keep my code more organized because I do not need to re write parts that are repetitive (all the building had a name, address and number of floors.)
 
-I would advice them to carefully read the instructions. I initially felt overwhelmed about the amount of work we would need do for this assignment. Once I decided to start, I decided to approach it piece by piece, following the instructions from the README file. 
+I would advice them to carefully read the instructions. I initially felt overwhelmed about the amount of work we would need do for this assignment. Once I decided to start, I approaced it piece by piece, following the instructions from the README file.  
