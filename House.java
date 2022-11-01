@@ -1,13 +1,18 @@
 import java.util.ArrayList;
 
-/* This is a stub for the House class */
 
 
+/** Creates a house
+ * 
+ */
 public class House extends Building{
 
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
 
+/** Class constructor
+ * @param House's name, address, number of floors, and whether or not it has a dinning room
+ */
   public House(String name, String address, int nFloors, boolean hDiningRoom) {
     super(name, address, nFloors); //The first set of step for constructing this house is constructing a building
     this.hasDiningRoom = hDiningRoom;
@@ -16,7 +21,11 @@ public class House extends Building{
     System.out.println("You have built a house: 🏠");
   }
 
-//Tell us if there is a dinning room in the house
+
+/** Tell us if there is a dinning room in the house
+ * @param None
+ * @return T/F: Whether the house has a dinning room or not.
+ */
   public boolean hasDiningRoom(){
     if (hasDiningRoom == true){
         System.out.println("There is a dining hall in this house.");
@@ -27,23 +36,36 @@ public class House extends Building{
       return hasDiningRoom;
   }
 
-  //Return the number of residents in the house
+  
+/** Get the number of residents in the house
+ * @param None
+ * @return number of residents in the house
+ */
   public int getResidents() {
     return this.residents.size();
   }
 
-  //Method to update the `ArrayList` of `residents` every time someone moves in 
+/** Method to update the `ArrayList` of `residents` every time someone moves in
+ * @param Name of the person moving into the house
+ */ 
   public void setmoveIn(String name) {
     this.residents.add(0,name); //add.(index, new resident)
   }
 
-  //Method to update the `ArrayList` of `residents` every time someone moves out
+  
+/** Method to update the `ArrayList` of `residents` every time someone moves out
+ * @param Name of the person moving out of the house
+ * @return name of the person who moved out of the house.
+ */
   public String setmoveOut(String name) {
     this.residents.remove(String.valueOf(name));
     return name; 
   }
 
-  //method that tells us whether or not a given person is a resident of the `House`
+/** Method that tells us whether or not a given person is a resident of the `House`
+ * @param Name of the person 
+ * @return T/F: if this person is a resident of the house
+ */
   public boolean isResident(String person) {
     return this.residents.contains(person);
   }

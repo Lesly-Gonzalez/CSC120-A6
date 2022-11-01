@@ -1,4 +1,8 @@
-/* This is a stub for the Cafe class */
+
+
+/** Creates a cafe 
+ * 
+ */
 public class Cafe extends Building{
 
     private int nCoffeeOunces; // The number of ounces of coffee remaining in inventory
@@ -6,6 +10,9 @@ public class Cafe extends Building{
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
 
+    /** Class constructor
+    * @param Cafe's name, address and number of floors
+    */
     public Cafe(String name, String address, int nFloors) {
         super(name, address, nFloors);
         this.nCoffeeOunces = 100;
@@ -16,7 +23,11 @@ public class Cafe extends Building{
         System.out.println("You have built a cafe: ☕");
     }
 
-    //Sell a cup of coffee!!!
+    
+    /** Sell a cup of coffee!!
+    * @param size of order (ounces), number of sugar packets, amount of cream, number of cups
+    */
+
     //public void sellCoffee(int size, int nSugarPackets, int nCreams); Am I allowed to change this?
     public void setSellCoffee(int size, int sugar, int cream, int cup) {
         this.nCoffeeOunces = this.nCoffeeOunces - size;
@@ -31,7 +42,11 @@ public class Cafe extends Building{
         cream + " packets of cream. Enjoy!");
     }
 
-        //Restock
+        
+        /** Restock the inventory
+        * @param size of order (ounces), number of sugar packets, amount of cream, number of cups
+        */
+
     private void restock(int size, int sugar, int cream, int cup) {
         if (size > this.nCoffeeOunces){
             this.nCoffeeOunces = this.nCoffeeOunces*10;
