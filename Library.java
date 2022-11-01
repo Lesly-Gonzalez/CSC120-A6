@@ -42,7 +42,7 @@ public class Library extends Building{
     /** Check out a book
     * @param title of the book we want to check out
     */
-    public void setCheckOut(String title) {
+    public void checkOut(String title) {
       this.collection.replace(title, true, false);
       System.out.println("You are borrowing "+ title +". Enjoy, and please return it on time.");
     }
@@ -51,7 +51,7 @@ public class Library extends Building{
     /** Return a book
     * @param title of the book we want to return
     */
-    public void setReturn(String title) {
+    public void returnBook(String title) {
       this.collection.replace(title, false, true);
       System.out.println("You have succesfully returned the book " + title);
     }
@@ -111,11 +111,12 @@ public class Library extends Building{
      Neilson.removeTitle("Azul");
      Neilson.printCollection();
 
-     Neilson.setCheckOut("Don Quixote");
+     Neilson.checkOut("Don Quixote");
      Neilson.containsTitle("Don Quixote");
      Neilson.isAvailable("Don Quixote");
 
-     Neilson.setReturn("Don Quixote");
+     Neilson.returnBook("Don Quixote");
+     Neilson.isAvailable("Don Quixote");
     }
   
   }

@@ -29,15 +29,15 @@ public class Cafe extends Building{
     */
 
     //public void sellCoffee(int size, int nSugarPackets, int nCreams); Am I allowed to change this?
-    public void setSellCoffee(int size, int sugar, int cream, int cup) {
+    public void sellCoffee(int size, int sugar, int cream) { //change it: delete cup, and have the exact name for the method call
         this.nCoffeeOunces = this.nCoffeeOunces - size;
         this.nSugarPackets = this.nSugarPackets - sugar;
         this.nCreams = this.nCreams - cream;
-        this.nCups = this.nCups - cup;
+        this.nCups = this.nCups - 1;
 
-        restock(size, sugar, cream, cup);
+        restock(size, sugar, cream, this.nCups);
 
-        System.out.println("Here is you order of " + cup + " cup of coffee with "
+        System.out.println("Here is your order of one cup of coffee with "
         + size + " ounces of expresso, " + sugar + " packets of sugar and " +
         cream + " packets of cream. Enjoy!");
     }
@@ -47,7 +47,7 @@ public class Cafe extends Building{
         * @param size of order (ounces), number of sugar packets, amount of cream, number of cups
         */
 
-    private void restock(int size, int sugar, int cream, int cup) {
+    private void restock(int size, int sugar, int cream, int nCups) {
         if (size > this.nCoffeeOunces){
             this.nCoffeeOunces = this.nCoffeeOunces*10;
             System.out.println("Just a moment. We're restocking the coffee");
@@ -60,7 +60,7 @@ public class Cafe extends Building{
             this.nCreams = this.nCreams*10;
             System.out.println("Just a moment. We're restocking the cream");
         }
-        if(cup > this.nCups) {
+        if(1 == nCups) {
             this.nCups = this.nCups*10;
             System.out.println("Just a moment. We're restocking the cups");
         }
@@ -71,9 +71,9 @@ public class Cafe extends Building{
         Cafe Compass = new Cafe("Compass", "Smith College", 1);
         System.out.println(Compass);
 
-        Compass.setSellCoffee(10, 5, 3, 1);
-        Compass.setSellCoffee(10, 5, 8, 1);
-
+        Compass.sellCoffee(10, 5, 3);
+        Compass.sellCoffee(15, 7, 10);
+        Compass.sellCoffee(20, 20, 8);
 
     }
     

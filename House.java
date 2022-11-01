@@ -41,14 +41,14 @@ public class House extends Building{
  * @param None
  * @return number of residents in the house
  */
-  public int getResidents() {
+  public int nResidents() {
     return this.residents.size();
   }
 
 /** Method to update the `ArrayList` of `residents` every time someone moves in
  * @param Name of the person moving into the house
  */ 
-  public void setmoveIn(String name) {
+  public void moveIn(String name) {
     this.residents.add(0,name); //add.(index, new resident)
   }
 
@@ -57,7 +57,7 @@ public class House extends Building{
  * @param Name of the person moving out of the house
  * @return name of the person who moved out of the house.
  */
-  public String setmoveOut(String name) {
+  public String moveOut(String name) {
     this.residents.remove(String.valueOf(name));
     return name; 
   }
@@ -74,15 +74,15 @@ public class House extends Building{
     House chase = new House("Chase", "134 Elm st", 4, true);
     System.out.println(chase);
     System.out.println(chase.hasDiningRoom());
-    System.out.println("Chase house has " + chase.getResidents() + " residents");
-    chase.setmoveIn("Lesly");
-    System.out.println("Chase house has " + chase.getResidents() + " residents");
-    chase.setmoveIn("Katalina");
-    System.out.println("Chase house has " + chase.getResidents() + " residents");
-    chase.setmoveIn("Anglis");
-    chase.setmoveIn("Bianca");
-    System.out.println("Chase house has " + chase.getResidents() + " residents");
-    System.out.println(chase.setmoveOut("Bianca") + " moved out");
+    System.out.println("Chase house has " + chase.nResidents() + " residents");
+    chase.moveIn("Lesly");
+    System.out.println("Chase house has " + chase.nResidents() + " residents");
+    chase.moveIn("Katalina");
+    System.out.println("Chase house has " + chase.nResidents() + " residents");
+    chase.moveIn("Anglis");
+    chase.moveIn("Bianca");
+    System.out.println("Chase house has " + chase.nResidents() + " residents");
+    System.out.println(chase.moveOut("Bianca") + " moved out");
     System.out.println(chase.isResident("Lesly"));
     System.out.println(chase.isResident("Bianca"));
   }
